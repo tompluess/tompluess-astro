@@ -9,16 +9,20 @@ const optimizedBackground = await getImage({ src: heroImage, format: "webp" });
 <Layout
   title="Astro Minimal Starter for Website"
   description="This is an Astro Minimal Starter Website with a SEO optimizing component, Tailwind CSS integration and many more whistles and bells."
-/>
-<div
-  style={`background-image: url(${optimizedBackground.src});`}
-  class="w-full h-48 md:h-72 lg:h-96 bg-cover bg-top"
 >
-</div>
-<h1>Astro</h1>
-<p>Hello World</p>
-<Image
-  src={heroImage}
-  alt=""
-  class="w-full h-48 md:h-72 lg:h-96 object-cover"
-/>
+  <div
+    style={`background-image: url(${optimizedBackground.src});`}
+    class="w-full h-48 md:h-72 lg:h-96 bg-cover bg-top"
+  >
+  </div>
+  <h1 class="m-6">Astro Minimal Starter Website</h1>
+  <p class="m-6">
+    This is an Astro Minimal Starter Website with a SEO optimizing component,
+    Tailwind CSS integration and many more whistles and bells.
+  </p>
+  <Image
+    src={heroImage}
+    alt=""
+    class="w-full h-48 md:h-72 lg:h-96 object-cover"
+  />
+</Layout>
