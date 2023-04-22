@@ -2,6 +2,14 @@
 import "../assets/global.css";
 import Seo from "./seo.astro";
 
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  robots?: boolean;
+}
+
+const { title, description, image, robots = true }: Props = Astro.props;
 ---
 
 <html lang="en">
@@ -10,8 +18,10 @@ import Seo from "./seo.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <Seo
-    title="Astro Minimal Starter"
-    description="This is an Astro Minimal Starter Website with a SEO optimizing component, Tailwind CSS integration and many more whistles and bells."
+      title={title}
+      description={description}
+      image={image}
+      robots={robots}
     />
   </head>
   <body>
