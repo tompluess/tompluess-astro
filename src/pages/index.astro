@@ -1,28 +1,28 @@
 ---
-import { Image, getImage } from "astro:assets";
-import heroImage from "../assets/rucksack.jpeg";
 import Layout from "../components/layout.astro";
-
-const optimizedBackground = await getImage({ src: heroImage, format: "webp" });
+import { Picture } from "@astrojs/image/components";
+import heroImage from "../assets/rucksack.jpeg";
 ---
 
 <Layout
   title="Astro Minimal Starter for Website"
   description="This is an Astro Minimal Starter Website with a SEO optimizing component, Tailwind CSS integration and many more whistles and bells."
 >
-  <div
-    style={`background-image: url(${optimizedBackground.src});`}
-    class="w-full h-48 md:h-72 lg:h-96 bg-cover bg-top"
-  >
-  </div>
+  <Picture
+    src={heroImage}
+    alt=""
+    widths={[400, 800, 1600]}
+    class="w-full h-48 md:h-72 lg:h-96 object-cover object-top"
+  />
   <h1 class="m-6">Astro Minimal Starter Website</h1>
   <p class="m-6">
     This is an Astro Minimal Starter Website with a SEO optimizing component,
     Tailwind CSS integration and many more whistles and bells.
   </p>
-  <Image
+  <Picture
     src={heroImage}
     alt=""
+    widths={[400, 800, 1600]}
     class="w-full h-48 md:h-72 lg:h-96 object-cover"
   />
 </Layout>
