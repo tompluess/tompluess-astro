@@ -1,10 +1,18 @@
 ---
-import { Image } from "astro:assets";
+import { Image, getImage } from "astro:assets";
 import heroImage from "../assets/rucksack.jpeg";
 import Layout from "../components/layout.astro";
+
+const optimizedBackground = await getImage({src: heroImage, format: 'webp'})
 ---
 
 <Layout>
-  <Image src={heroImage} alt="" height="250" />
+  <div
+    style={`background-image: url(${optimizedBackground.src});`}
+    class="w-full h-48 md:h-72 lg:h-96 bg-cover bg-top"
+  >
+  </div>
   <h1>Astro</h1>
+  <p>Hello World</p>
+  <Image src={heroImage} alt="" class="w-full h-48 md:h-72 lg:h-96 object-cover " />
 </Layout>
