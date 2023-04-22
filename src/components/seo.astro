@@ -28,11 +28,10 @@ const {
 const url = Astro.url.toString();
 ---
 
-<meta name="generator" content={Astro.generator} />
+<!-- SEO -->
+{robots && <meta name="robots" content="noindex, nofollow" />}
 <title>{title || metadata.title}</title>
 <meta name="description" content={metadata.description} />
-
-<!-- SEO -->
 <link rel="canonical" href={url} />
 
 <!-- Open Graph -->
@@ -40,9 +39,10 @@ const url = Astro.url.toString();
 <meta property="og:title" content={title || metadata.title} />
 <meta property="og:description" content={description || metadata.description} />
 <meta property="og:url" content={url} />
+<meta property="og:type" content="website">
 <meta
-  property="og:image"
-  content={image ? `${image}?width=1200&height=630` : metadata.image.src}
+property="og:image"
+content={image ? `${image}?width=1200&height=630` : metadata.image.src}
 />
 
 <!-- Twitter -->
@@ -52,4 +52,5 @@ const url = Astro.url.toString();
 <meta name="twitter:image" content={image || metadata.image.src} />
 <meta name="twitter:domain" content={import.meta.env.SITE} />
 
-{robots && <meta name="robots" content="noindex, nofollow" />}
+<!-- Confess Tech Stack ;) -->
+<meta name="generator" content={Astro.generator} />
