@@ -1,27 +1,28 @@
 ---
-import { getImage } from '@astrojs/image';
+import { getImage } from "@astrojs/image";
+import defaultImage from "../assets/rucksack.jpeg";
 
 const metadata = {
   sitename: "Astro Minimal Starter",
   title: "Astro Metadata Title",
   description: "Astro Metadata Description",
-  image: heroImage,
+  image: defaultImage,
   robots: true,
 };
 
 interface Props {
   title?: string;
   description?: string;
-  image: string;
+  image?: ImageMetadata;
   robots?: boolean;
 }
 
 const { title, description, image, robots = true }: Props = Astro.props;
 
 const image1200 = await getImage({
-  src: import(image ? image : metadata.image),
+  src: image ? image : metadata.image,
   alt: "",
-  width: 1200
+  width: 1200,
 });
 
 const imageUrl = new URL(image1200.src, Astro.site);
@@ -40,10 +41,7 @@ const pageUrl = new URL(Astro.url.pathname, Astro.site);
 <meta property="og:description" content={description || metadata.description} />
 <meta property="og:url" content={pageUrl} />
 <meta property="og:type" content="website" />
-<meta
-  property="og:image"
-  content={imageUrl}
-/>
+<meta property="og:image" content={imageUrl} />
 
 <!-- Twitter -->
 <meta name="twitter:title" content={title} />
