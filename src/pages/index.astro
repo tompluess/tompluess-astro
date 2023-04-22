@@ -1,18 +1,10 @@
 ---
-import { Image } from 'astro:assets'
+import { Image } from "astro:assets";
 import heroImage from "../assets/rucksack.jpeg";
+import Layout from "../components/layout.astro";
 ---
 
-<html lang="de">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<Image src={heroImage} alt="" height="250"/>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <Image src={heroImage} alt="" height="250" />
+  <h1>Astro</h1>
+</Layout>
