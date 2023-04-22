@@ -1,7 +1,9 @@
 ---
+import { Image } from 'astro:assets'
+import heroImage from "../assets/rucksack.jpeg";
 ---
 
-<html lang="en">
+<html lang="de">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -10,6 +12,7 @@
 		<title>Astro</title>
 	</head>
 	<body>
+		<Image src={heroImage} alt="" height="250"/>
 		<h1>Astro</h1>
 	</body>
 </html>
