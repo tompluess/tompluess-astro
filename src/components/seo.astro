@@ -1,53 +1,53 @@
 ---
-import heroImage from "../assets/rucksack.jpeg";
+import { getImage } from "@astrojs/image";
+import defaultImage from "../assets/rucksack.jpeg";
 
 const metadata = {
   sitename: "Astro Minimal Starter",
   title: "Astro Metadata Title",
   description: "Astro Metadata Description",
-  image: heroImage,
+  image: defaultImage,
   robots: true,
 };
 
 interface Props {
   title?: string;
   description?: string;
-  image?: string;
+  image?: ImageMetadata;
   robots?: boolean;
 }
 
-const {
-  title,
-  description,
-  image,
-  robots = true,
-}: Props = Astro.props;
+const { title, description, image, robots = true }: Props = Astro.props;
 
-const url = Astro.url.toString();
+const image1200 = await getImage({
+  src: image ? image : metadata.image,
+  alt: "",
+  width: 1200,
+});
+
+const imageUrl = new URL(image1200.src, Astro.site);
+
+const pageUrl = new URL(Astro.url.pathname, Astro.site);
 ---
 
-<!-- SEO -->
-{robots && <meta name="robots" content="noindex, nofollow" />}
+<!-- SEO -->{robots && <meta name="robots" content="noindex, nofollow" />}
 <title>{title || metadata.title}</title>
 <meta name="description" content={metadata.description} />
-<link rel="canonical" href={url} />
+<link rel="canonical" href={pageUrl} />
 
 <!-- Open Graph -->
 <meta property="og:site_name" content={metadata.sitename} />
 <meta property="og:title" content={title || metadata.title} />
 <meta property="og:description" content={description || metadata.description} />
-<meta property="og:url" content={url} />
-<meta property="og:type" content="website">
-<meta
-property="og:image"
-content={image ? `${image}?width=1200&height=630` : metadata.image.src}
-/>
+<meta property="og:url" content={pageUrl} />
+<meta property="og:type" content="website" />
+<meta property="og:image" content={imageUrl} />
 
 <!-- Twitter -->
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content={image || metadata.image.src} />
+<meta name="twitter:image" content={imageUrl} />
 <meta name="twitter:domain" content={import.meta.env.SITE} />
 
 <!-- Confess Tech Stack ;) -->
