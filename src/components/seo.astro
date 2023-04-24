@@ -30,7 +30,8 @@ const imageUrl = new URL(image1200.src, Astro.site);
 const pageUrl = new URL(Astro.url.pathname, Astro.site);
 ---
 
-<!-- SEO -->{robots && <meta name="robots" content="noindex, nofollow" />}
+<!-- SEO -->
+{ ! robots && <meta name="robots" content="noindex, nofollow" />}
 <title>{title || metadata.title}</title>
 <meta name="description" content={metadata.description} />
 <link rel="canonical" href={pageUrl} />
