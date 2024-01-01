@@ -1,0 +1,96 @@
+---
+const siteTitle = 'Astro Starter'
+
+const menu = [
+  { link: "/", text: "Home" },
+  { link: "/about/", text: "About" },
+  { link: "/contact/", text: "Contact" },
+];
+---
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.getElementById("nav-toggle-button");
+    const icons = document.querySelectorAll(".toggle-icon");
+    const toggleMenu = document.getElementById("nav-toggle-menu");
+    const nav = document.querySelector("nav");
+
+    // Close the navigation on page load
+    nav.style.height = 0 + "px";
+
+    toggleButton.addEventListener("click", () => {
+      icons.forEach((i) => i.classList.toggle("hidden"));
+      toggleMenu.classList.toggle("hidden");
+
+      const fullHeight = nav.scrollHeight + "px";
+      if (nav.style.height === fullHeight) {
+        nav.style.height = 0;
+        return;
+      }
+      nav.style.height = fullHeight;
+    });
+  });
+</script>
+
+<header
+  class="header fixed z-20 w-full max-w-screen-2xl flex flex-col top-0 px-6 py-5 opacity-90 bg-white"
+>
+  <div class="flex flex-row justify-between content-start w-full">
+    <a href="/" class="mt-1 md:mt-0"
+      ><span
+        class="h-8 w-20 bg-no-repeat"
+        style="background-image:url(/images/logo.svg)"></span><span
+        class="text-2xl">{siteTitle}</span
+      ></a
+    ><nav>
+      <div class="md:hidden text-right">
+        <button id="nav-toggle-button" type="button" class="self-end"
+          ><svg
+            class="toggle-icon w-8 h-8 fill-current text-white"
+            viewBox="0 0 41 41"
+            xmlns="http://www.w3.org/2000/svg"
+            ><title>Menu</title><circle cx="20.5" cy="20.5" r="20.5"
+            ></circle><path
+              stroke="gray"
+              stroke-width="2"
+              d="M0 10 H41 M0 25 H41 M0 40 H41"></path></svg
+          >
+          <svg
+            class="toggle-icon hidden w-8 h-8 fill-current text-white"
+            viewBox="0 0 41 41"
+            xmlns="http://www.w3.org/2000/svg"
+            ><g
+              clip-path="url(#clip0)"
+              stroke="gray"
+              stroke-width="2"
+              stroke-miterlimit="10"
+              ><path d="M5 9 L37 41 M5 41 L37 9"></path></g
+            ></svg
+          >
+        </button>
+      </div><div class="hidden md:flex md:h-full">
+        {
+          menu.map((m) => (
+            <div class="hidden md:block text-right ml-8">
+              <a href={m.link}>
+                <span class="text-2xl font-light">{m.text}</span>
+              </a>
+            </div>
+          ))
+        }
+      </div>
+
+      <div id="nav-toggle-menu" class="hidden flex flex-col md:hidden">
+        {
+          menu.map((m) => (
+            <div class="flex self-end my-4">
+              <a href={m.link}>
+                <span class="text-2xl font-light">{m.text}</span>
+              </a>
+            </div>
+          ))
+        }
+      </div>
+    </nav>
+  </div>
+</header>

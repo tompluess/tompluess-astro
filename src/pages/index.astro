@@ -1,5 +1,6 @@
 ---
 import Layout from "../components/layout.astro";
+import Navigation from "../components/navigation.astro";
 import { Picture } from "astro:assets";
 import heroImage from "../assets/rucksack.jpeg";
 ---
@@ -14,10 +15,12 @@ import heroImage from "../assets/rucksack.jpeg";
     widths={[400, 800, 1600]}
     class="w-full h-48 md:h-72 lg:h-96 object-cover object-top"
   />
+  <Navigation />
   <h1 class="m-6">Astro Minimal Starter Website</h1>
   <p class="m-6">
     This is an Astro Minimal Starter Website with a SEO optimizing component,
-    Tailwind CSS integration and many more whistles and bells.
+    Tailwind CSS integration, Hamburger Navigation Menu and many more whistles
+    and bells.
   </p>
   <Picture
     src={heroImage}
