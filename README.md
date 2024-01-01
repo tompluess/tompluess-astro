@@ -1,4 +1,7 @@
-# Astro Starter Kit: Website with Tailwind
+# Website of Tom Plüss
+
+Live site: [tompluess.ch](https://tompluess.ch)
+Deployed on: [vercel.com](https://vercel.com)
 
 ## Featuring
 
