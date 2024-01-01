@@ -3,7 +3,7 @@
 ## Featuring
 
 - ✅ Integration with **Tailwind CSS** ([@astrojs/tailwind](https://docs.astro.build/en/guides/integrations-guide/tailwind/))
-- ✅ **Image optimization** using ([@astrojs/images](https://docs.astro.build/en/guides/integrations-guide/image/))
+- ✅ **Image optimization** using built-in image support([astro:assets](https://docs.astro.build/en/guides/images/))
 - ✅ **SEO optimization** with site metadata, title and meta description tags, [Open Graph](https://www.opengraph.xyz) properties
 
 ## 🧞 Commands
