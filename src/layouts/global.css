@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100%;
+  margin: 0px;
+}
+
+p {
+  @apply mt-4 text-lg font-light;
+}
+
+a {
+  @apply text-blue-700;
+}
+
+a.button {
+  @apply px-4 py-2 rounded-full bg-blue-800 text-white;
+}
+
+.header a:hover,
+a:hover {
+  @apply text-orange-500;
+}
+
+.header a {
+  @apply text-gray-700;
+}
+
+h1 {
+  @apply my-6 text-2xl font-medium;
+}
+
+h2 {
+  @apply mt-4 text-xl font-medium leading-tight;
+}
+
+h3 {
+  @apply mt-4 text-xl font-bold;
+}
+
+h4 {
+  @apply mt-4 text-xl;
+}
+
+h1 + p,
+h2 + p {
+  @apply mt-2;
+}
+
+* + h1,
+* + h2 {
+  @apply mt-8;
+}
+
+h1 + h1,
+h2 + h2 {
+  @apply mt-0;
+}
+
+img {
+  @apply my-8;
+}
+
+pre {
+  @apply my-2;
+}
+
+ul {
+  @apply pl-6 list-disc;
+}
+
+li {
+  @apply mt-2 text-lg font-light;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+.parallax__layer--back {
+  transform: translateZ(-1px) scale(2);
+}
+.parallax__group {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
