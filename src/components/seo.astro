@@ -1,26 +1,26 @@
 ---
 import { getImage } from "astro:assets";
-import defaultImage from "../assets/rucksack.jpeg";
+import defaultCover from "../assets/rucksack.jpeg";
 
 const metadata = {
   sitename: "Tom Plüss",
   title: "Tom Plüss",
   description: "Tom Plüss - Berater, Coach, Software Engineer",
-  image: defaultImage,
+  cover: defaultCover,
   robots: true,
 };
 
 interface Props {
   title?: string;
   description?: string;
-  image?: ImageMetadata;
+  cover?: ImageMetadata;
   robots?: boolean;
 }
 
-const { title, description, image, robots = true }: Props = Astro.props;
+const { title, description, cover, robots = true }: Props = Astro.props;
 
 const image1200 = await getImage({
-  src: image ? image : metadata.image,
+  src: cover ? cover : metadata.cover,
   alt: "",
   width: 1200,
 });

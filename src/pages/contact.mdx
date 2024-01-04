@@ -2,15 +2,18 @@
 layout: ../layouts/md.astro
 title: Angebot von Tom Plüss
 description: Angebot von Tom Plüss - Projektleiter, Berater und Begleiter für verschiedene Herausforderungen.
-socialImage: "tompluess"
+cover: "tompluess"
 heroImageBottom:
   name: "grosses-feuer"
   alt: "Feuer als symbolisches Zentrum der Gemeinschaft"
 ---
+import { Image } from 'astro:assets';
+import portrait from "../assets/tompluess.jpeg";
 
-![Tom Plüss - Projektleiter, Coach und Berater](../assets/tompluess.jpeg)
+<Image class="w-full max-w-screen-sm" src={portrait} alt="Tom Plüss - Projektleiter, Coach und Berater"/>
 
-<h1>Tom Plüss Consulting</h1>
+# Tom Plüss Consulting
+
 <p>Widenstrasse 32<br /> 6317 Oberwil b. Zug</p>
 <p><a href="tel:+41786469394">+41 78 646 93 94</a></p>
 <p class="mt-8 mb-16">
