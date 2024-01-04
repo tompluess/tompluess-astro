@@ -6,7 +6,7 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   // TODO: site: "https://tompluess.ch/",
-  site: "https://tompluess.vercel.app/",
+  site: "https://tompluess-astro-git-md-layout-tompluess.vercel.app/",
   integrations: [
     mdx(),
     tailwind({
