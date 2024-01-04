@@ -2,9 +2,7 @@
 layout: ../layouts/md.astro
 title: Angebot von Tom Plüss
 description: Angebot von Tom Plüss - Projektleiter, Berater und Begleiter für verschiedene Herausforderungen.
-heroImageTop:
-  name: "rucksack"
-  alt: "Unterwegs mit dem Rucksack in der Natur"
+socialImage: feuer
 heroImageBottom:
   name: "grosses-feuer"
   alt: "Feuer als symbolisches Zentrum der Gemeinschaft"

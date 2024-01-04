@@ -4,10 +4,10 @@ import Layout from "./layout.astro";
 import Navigation from "../components/navigation.astro";
 import { Picture, Image } from "astro:assets";
 const images = await Astro.glob("../assets/*");
-const heroImageTop = images.find(
+const socialImage = images.find(
   (image) =>
     image.default.src &&
-    image.default.src.includes(frontmatter.heroImageTop.name)
+    image.default.src.includes(frontmatter.socialImage)
 ).default;
 const heroImageBottom = images.find(
   (image) =>
@@ -19,7 +19,7 @@ const heroImageBottom = images.find(
 <Layout
   title={frontmatter.title}
   description={frontmatter.description}
-  image={heroImageTop}
+  image={socialImage}
   favicon_emoji={frontmatter.favicon_emoji}
 >
   <Navigation />

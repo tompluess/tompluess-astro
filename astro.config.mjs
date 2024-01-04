@@ -4,7 +4,8 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astro-starter-tailwindcss.vercel.app/",
+  // TODO: site: "https://tompluess.ch/",
+  site: "https://tompluess.vercel.app/",
   integrations: [
     tailwind({
       config: {
@@ -13,4 +14,8 @@ export default defineConfig({
     }),
     sitemap(),
   ],
+  i18n: {
+    defaultLocale: "de",
+    locales: ["de"]
+  }
 });
