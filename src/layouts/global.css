@@ -61,7 +61,7 @@ h2 + h2 {
 }
 
 img {
-  @apply my-8;
+  @apply my-2;
 }
 
 pre {
