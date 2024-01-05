@@ -3,7 +3,7 @@ layout: ../layouts/md.astro
 title: Tom Plüss - Berater, Projektleiter, Software Engineer
 description: Persönliche Webseite von Tom Plüss, Zürich - Berater, Projektleiter, Software Engineer und Begleiter für verschiedene Herausforderungen.
 ---
-import { Image } from 'astro:assets';
+import { Picture } from 'astro:assets';
 import Gallery from "../components/gallery.astro"
 import data from "./homepage.json"
 import heroImageBottom from "../assets/tom-pluess.jpeg";
@@ -21,7 +21,7 @@ Mein Vorgehen basiert auf der Kombination von authentischer Begegnung, resourcen
 
 <Gallery items={data.gallerySecond} allowTwoCols={false}/>
 
-<Image
+<Picture
   src={heroImageBottom}
   alt="Tom Plüss - Berater, Projektleiter, Software Engineer und Begleiter für verschiedene Herausforderungen"
   class="w-full max-h-96 mt-16 object-cover object-[50%_35%]"
