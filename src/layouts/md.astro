@@ -2,11 +2,12 @@
 const { frontmatter } = Astro.props;
 import Layout from "./layout.astro";
 import Navigation from "../components/navigation.astro";
+const defaultCover = "tom-pluess"
 const images = await Astro.glob("../assets/*");
 const cover = images.find(
   (image) =>
     image.default.src &&
-    image.default.src.includes(frontmatter.cover)
+    image.default.src.includes(frontmatter.cover ? frontmatter.cover : defaultCover)
 ).default;
 ---
 
