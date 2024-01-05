@@ -2,15 +2,12 @@
 layout: ../layouts/md.astro
 title: Tom Plüss - Berater, Projektleiter, Software Engineer
 description: Persönliche Webseite von Tom Plüss, Zürich - Berater, Projektleiter, Software Engineer und Begleiter für verschiedene Herausforderungen.
-cover: "oberwil"
-heroImageBottom:
-  name: "grosses-feuer"
-  alt: "Feuer als symbolisches Zentrum der Gemeinschaft"
+cover: "tom-pluess"
 ---
 import { Image } from 'astro:assets';
 import Gallery from "../components/gallery.astro"
-import portrait from "../assets/tompluess.jpeg";
 import data from "./homepage.json"
+import heroImageBottom from "../assets/tom-pluess.jpeg";
 
 
 # Herzlich Willkommen bei Tom Plüss
@@ -24,3 +21,9 @@ Mein Vorgehen basiert auf der Kombination von authentischer Begegnung, resourcen
 ## Weitere Tätigkeitsgebiete
 
 <Gallery items={data.gallerySecond}/>
+
+<Image
+  src={heroImageBottom}
+  alt="Tom Plüss - Berater, Projektleiter, Software Engineer und Begleiter für verschiedene Herausforderungen"
+  class="w-full max-h-96 object-cover object-[50%_35%]"
+/>

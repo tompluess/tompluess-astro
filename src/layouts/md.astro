@@ -9,11 +9,6 @@ const cover = images.find(
     image.default.src &&
     image.default.src.includes(frontmatter.cover)
 ).default;
-const heroImageBottom = images.find(
-  (image) =>
-    image.default.src &&
-    image.default.src.includes(frontmatter.heroImageBottom.name)
-).default;
 ---
 
 <Layout
@@ -26,10 +21,4 @@ const heroImageBottom = images.find(
   <div class="w-full max-w-screen-2xl px-2 sm:px-6 md:px-16 lg:px-32 pt-32">
     <slot />
   </div>
-  <Picture
-    src={heroImageBottom}
-    alt={frontmatter.heroImageBottom.alt}
-    widths={[400, 800, 1600]}
-    class="w-full object-cover"
-  />
 </Layout>

@@ -2,13 +2,12 @@
 layout: ../layouts/md.astro
 title: Angebot von Tom Plüss
 description: Angebot von Tom Plüss - Projektleiter, Berater und Begleiter für verschiedene Herausforderungen.
-cover: "tompluess"
-heroImageBottom:
-  name: "grosses-feuer"
-  alt: "Feuer als symbolisches Zentrum der Gemeinschaft"
+cover: "tompluess-portrait"
 ---
 import { Image } from 'astro:assets';
-import portrait from "../assets/tompluess.jpeg";
+import portrait from "../assets/tompluess-portrait.jpeg";
+import heroImageBottom from "../assets/grosses-feuer.jpeg";
+
 
 <Image class="w-full max-w-screen-sm" src={portrait} alt="Tom Plüss - Projektleiter, Coach und Berater"/>
 
@@ -31,3 +30,9 @@ Füge mich zu deinem Adressbuch hinzu
 **_Das Feuer in seiner Seele soll man nie ausgehen lassen, sondern schüren._**
 
 _- Vincent van Gogh_
+
+<Image
+  src={heroImageBottom}
+  alt="Feuer als symbolisches Zentrum der Gemeinschaft"
+  class="w-full max-h-96 object-cover object-[50%_35%]"
+/>
