@@ -1,0 +1,39 @@
+{
+  "gallery": [
+    {
+      "title": "Reduzieren",
+      "copy": "Ablenkung eliminieren",
+      "image": "../assets/gallery/tom-kocht.jpeg"
+    },
+    {
+      "title": "Klarheit gewinnen",
+      "copy": "Perspektive wechseln",
+      "image": "../assets/gallery/wegweiser.jpeg"
+    },
+    {
+      "title": "Durchstarten",
+      "copy": "Und das Richtige tun",
+      "image": "../assets/gallery/morgenrot.jpeg"
+    }
+  ],
+  "gallerySecond": [
+    {
+      "title": "PVcontracting",
+      "copy": "Solarstrom vom eigenen Dach – Ohne Investitionskosten",
+      "image": "../assets/gallery/pvcontracting.jpeg",
+      "href": "https://pvcontracting.ch"
+    },
+    {
+      "title": "Simplificator",
+      "copy": "Berater, Projektleiter, Software Engineer",
+      "image": "../assets/gallery/simplificator-buttons.jpeg",
+      "href": "https://simplificator.com/person/tom"
+    },
+    {
+      "title": "Zirkuswagen Hobbit",
+      "copy": "Mein Zirkuswagen kann für Ferien oder eine Auszeit gemietet werden",
+      "image": "../assets/hobbit/Hobbit-verschneiter-Berggipfel.jpeg",
+      "href": "/hobbit"
+    }
+  ]
+}

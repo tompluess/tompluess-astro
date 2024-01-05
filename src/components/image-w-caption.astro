@@ -1,0 +1,19 @@
+---
+import { Image } from "astro:assets";
+import OptionalLink from "./optional-link.astro";
+
+const { title, copy, image, href = "" } = Astro.props.item;
+
+const images = import.meta.glob("../assets/*/*");
+
+---
+
+<OptionalLink href={href}>
+  <figure>
+    <Image src={images[image]()} alt={title} />
+    <figcaption>
+      <div class="text-l font-medium my-4">{title}</div>
+      <div class="text-l font-extralight mt-4 mb-8">{copy}</div>
+    </figcaption>
+  </figure>
+</OptionalLink>

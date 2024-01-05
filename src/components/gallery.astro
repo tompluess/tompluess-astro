@@ -1,0 +1,10 @@
+---
+import { Debug } from "astro:components";
+import ImageWithCaption from "./image-w-caption.astro";
+
+const { items, cols = 3 } = Astro.props;
+---
+
+<div class="grid-cols-2 gap-8 py-8 md:grid xl:grid-cols-3">
+  {items.map((item) => <ImageWithCaption {item} />)}
+</div>
