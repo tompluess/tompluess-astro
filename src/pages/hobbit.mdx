@@ -1,0 +1,38 @@
+---
+layout: ../layouts/md.astro
+title: Hobbit der Zirkuswagen auf dem Camping Viva
+description: Fotoblog, zur Entstehung des Zirkuswagen Hobbit
+cover: "hobbit-erster-schnee"
+---
+import { Image } from 'astro:assets';
+import Gallery from "../components/gallery.astro"
+import data from "./hobbit.json"
+import heroImageBottom from "../assets/tom-pluess.jpeg";
+
+
+# Zirkuswagen "Hobbit"
+
+Mein Traum vom eigenen Zirkuswagen wird mit dem "Hobbit" wahr.
+
+Auf dem [Camping Viva](https://campingviva.ch) habe ich einen Standplatz gefunden, wo die Infrastruktur, Naturnähe und Philosophie passen um ganzjährig eine Rückzugsmöglichkeit zu gestalten.
+
+Und das Beste für dich: An den Tagen, an welchen ich nicht selber im Hobbit hause, kannst du ihn für dich reservieren und so erholsame Tage in den Bergen verbringen.
+
+<p class="mt-8 mb-16">
+  <a class="button" href="https://subscribepage.io/hobbit">Weitere Infos</a>
+</p>
+
+## Fotoblog, zur Entstehung des Zirkuswagen Hobbit
+
+<Gallery items={data.galleryFirst}/>
+
+Wenn du auch mal ein paar Tage im Zirkuswagen "Hobbit" wohnen möchtest, kannst du bei folgendem Link weitere Infos dazu bestellen:
+
+<p class="mt-8 mb-16">
+  <a class="button" href="https://subscribepage.io/hobbit">Weitere Infos</a>
+</p>
+
+
+## Partner
+
+<Gallery items={data.gallerySecond}/>

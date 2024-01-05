@@ -1,0 +1,24 @@
+---
+const { frontmatter } = Astro.props;
+import Layout from "./layout.astro";
+import Navigation from "../components/navigation.astro";
+const defaultCover = "tom-pluess"
+const images = await Astro.glob("../assets/*");
+const cover = images.find(
+  (image) =>
+    image.default.src &&
+    image.default.src.includes(frontmatter.cover ? frontmatter.cover : defaultCover)
+).default;
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.description}
+  cover={cover}
+  favicon_emoji={frontmatter.favicon_emoji}
+>
+  <Navigation />
+  <div class="w-full max-w-screen-2xl px-2 sm:px-6 md:px-16 lg:px-32 pt-32">
+    <slot />
+  </div>
+</Layout>

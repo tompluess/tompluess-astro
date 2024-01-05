@@ -1,0 +1,9 @@
+---
+import ImageWithCaption from "./image-w-caption.astro";
+
+const { items, allowTwoCols = true } = Astro.props;
+---
+
+<div class={"md:grid gap-8 py-8 xl:grid-cols-3 " + (allowTwoCols?"grid-cols-2":"grid-cols-3")}>
+  {items.map((item) => <ImageWithCaption {item} />)}
+</div>

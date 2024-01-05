@@ -1,0 +1,40 @@
+---
+layout: ../layouts/md.astro
+title: Angebot von Tom Plüss
+description: Angebot von Tom Plüss - Projektleiter, Berater und Begleiter für verschiedene Herausforderungen.
+cover: "tompluess-portrait"
+---
+import { Image } from 'astro:assets';
+import portrait from "../assets/tompluess-portrait.jpeg";
+import heroImageBottom from "../assets/grosses-feuer.jpeg";
+
+
+<Image class="w-full max-w-screen-sm" src={portrait} alt="Tom Plüss - Projektleiter, Coach und Berater"/>
+
+# Tom Plüss Consulting
+
+<p>Widenstrasse 32<br /> 6317 Oberwil b. Zug</p>
+<p><a href="tel:+41786469394">+41 78 646 93 94</a></p>
+<p class="mt-8 mb-16">
+  <a class="button" href="https://cal.com/tompluess/treffpunkt"
+    >Termin vereinbaren</a>
+</p>
+
+
+Füge mich zu deinem Adressbuch hinzu
+(QR Code klicken oder scannen):
+
+[![Füge mich zu deinem Adressbuch hinzu (VCard)](/tompluess-qr.png)](/tompluess.vcf)
+
+
+<div class="mt-16">
+**_Das Feuer in seiner Seele soll man nie ausgehen lassen, sondern schüren._**
+
+_- Vincent van Gogh_
+</div>
+
+<Image
+  src={heroImageBottom}
+  alt="Feuer als symbolisches Zentrum der Gemeinschaft"
+  class="w-full max-h-96 object-cover object-[50%_35%]"
+/>

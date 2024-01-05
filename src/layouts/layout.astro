@@ -1,0 +1,35 @@
+---
+import "./global.css";
+import Seo from "../components/seo.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+  cover?: ImageMetadata;
+  favicon_emoji?: string;
+  robots?: boolean;
+}
+
+const { title, description, cover, favicon_emoji="☀️", robots = true }: Props = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href=`data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>${favicon_emoji}</text></svg>`>
+    <meta name="viewport" content="width=device-width" />
+    <Seo
+      title={title}
+      description={description}
+      cover={cover}
+      robots={robots}
+    />
+    <!-- Vercel Analytics -->
+    <script defer src="/_vercel/insights/script.js"></script>
+    <!-- Plausible.io Analytics -->
+    <script defer data-domain="tompluess.ch" src="https://plausible.io/js/script.js"></script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
