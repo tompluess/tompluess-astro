@@ -30,6 +30,8 @@ const { title, description, cover, favicon_emoji="☀️", robots = true }: Prop
     <script defer data-domain="tompluess.ch" src="https://plausible.io/js/script.js"></script>
   </head>
   <body>
-    <slot />
+    <div class="flex justify-center">
+      <slot />
+    </div>
   </body>
 </html>
