@@ -8,7 +8,7 @@ const images = import.meta.glob("../assets/*/*");
 ---
 
 <OptionalLink href={href}>
-  <figure>
+  <figure class="mb-8">
     <Image
       src={images[image]()}
       widths={[480, 960]}
@@ -16,8 +16,8 @@ const images = import.meta.glob("../assets/*/*");
       alt={title}
     />
     <figcaption>
-      <div class="text-l font-medium my-4">{title}</div>
-      <div class="text-l font-extralight my-2">{copy}</div>
+      <div class="text-l font-medium my-2">{title}</div>
+      <div class="text-l font-extralight">{copy}</div>
     </figcaption>
   </figure>
 </OptionalLink>
