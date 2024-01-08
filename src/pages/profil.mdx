@@ -1,0 +1,102 @@
+---
+layout: ../layouts/md.astro
+title: Kontakt von Tom Plüss
+description: Kontakt von Tom Plüss - Projektleiter, Berater und Begleiter für verschiedene Herausforderungen.
+cover: "tompluess-portrait"
+---
+import { Image } from 'astro:assets';
+import portrait from "../assets/tompluess-portrait.jpeg";
+import heroImageBottom from "../assets/grosses-feuer.jpeg";
+
+<div class="md:grid grid-cols-2 gap-8" >
+
+  <div class="w-full h-full flex">
+    <Image
+      src={portrait}
+      alt="Tom Plüss - Projektleiter, Coach und Berater"
+      widths={[480, 960]}
+      sizes={`(max-width: 960px) px, 960px`}
+      class="w-full max-w-screen-sm h-full object-cover pt-6"
+    />
+  </div>
+
+  <div>
+    # Thomas "Tom" Plüss
+
+    Ich begegne Menschen authentisch mit allem was ich bin & schenke ihnen meine volle
+    Präsenz.
+
+    Software Engineering beginnt für mich bei der methodischen Begleitung von Kunden,
+    beinhaltet zielorientiertes Requirement Engineering, automatisierte CI/CD Pipelines und
+    Integration von modernen Technologien, kombiniert mit hohem Qualitätsanspruch.
+
+</div>
+<div>
+</div>
+<div class="text-right">
+    #### Werte
+    **Klarheit**<br/>
+    Struktur
+
+    **Sinnhaftigkeit**<br/>
+    Tiefe, Qualität, Echtheit
+
+    **Lebendigkeit**<br/>
+    Selbstbestimmung, Abenteuer, Einfachheit, Gelassenheit
+
+    **Verbindung**<br/>
+    Gemeinschaft, Kreis, Co-Creation, Natur
+
+    **Authentizität**<br/>
+    Ehrlichkeit
+
+    **Verbindlichkeit**<br/>
+    Verlässlichkeit, Verantwortung
+  </div>
+
+  <div>
+    #### Stationen
+
+    Seit 2023 Co-Geschäftsleiter und Inhaber von [PVcontracting AG](https://pvcontracting.ch)
+
+    Seit 2018 **Beratung, Projektleitung, Qualitätssicherung**<br/>
+    2020-2023 Mitglied der Geschäftsleitung bei [Simplificator AG, Zürich](https://www.simplificator.com)
+
+    2013 - 2018 **Software Engineer, Beratung & Coaching**,
+    Geschäftsleitung und Inhaber von Plüss Druck AG, Zürich
+
+    2009 - 2011 **Kulturreise** durch Argentinien, Chile, Bolivien, Peru,
+    ein Grossteil davon mit dem Velo
+
+    2000 - 2013 Verschiedene Anstellungen als **Software Engineer**,
+    Projektbeschreibungen auf meinem [LinkedIn Profil](https://www.linkedin.com/in/tompluess/details/experience/)
+
+    1998 - 2005 **MSc ETH in Computer Science**, Software Engineering, ETH Zürich
+  </div>
+  <div/>
+  <div/>
+  <div class="text-right">
+    #### Freizeit
+
+    Tanzen in verschiedenen Stilen, alleine und zu zweit
+
+    Einfaches, nomadisches Leben in der Natur
+
+    Velo-, Berg-, Ski- & Wandertouren
+  </div>
+</div>
+
+
+<div class="mt-16">
+**_Das Feuer in seiner Seele soll man nie ausgehen lassen, sondern schüren._**
+
+_- Vincent van Gogh_
+</div>
+
+<Image
+  src={heroImageBottom}
+  alt="Feuer als symbolisches Zentrum der Gemeinschaft"
+  widths={[480, 720, 1024, 1600, 2400]}
+  sizes={`(max-width: 480px) 480px, (max-width: 720) 720px, (max-width: 1024px) 1024px, (max-width: 1600px) 1600px, 2400px`}
+  class="w-full max-h-96 object-cover object-[50%_35%]"
+/>
