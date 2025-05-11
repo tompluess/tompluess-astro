@@ -4,13 +4,16 @@ import OptionalLink from "./optional-link.astro";
 
 const { title, copy, image, href = "" } = Astro.props.item;
 
-const images = import.meta.glob("../assets/*/*");
+// Import images from all relevant paths
+const rootImages = import.meta.glob("../assets/*", { eager: true });
+const nestedImages = import.meta.glob("../assets/*/*", { eager: true });
+const allImages = { ...rootImages, ...nestedImages };
 ---
 
 <OptionalLink href={href}>
   <figure class="mb-8">
     <Image
-      src={images[image]()}
+      src={allImages[image]?.default || allImages['../assets/rucksack.jpeg'].default}
       widths={[480, 960]}
       sizes={`(max-width: 480px) 480px, 960px`}
       alt={title}
