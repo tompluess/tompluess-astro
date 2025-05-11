@@ -26,3 +26,7 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Resources
 
 Feel free to check the [Astro documentation](https://docs.astro.build) or jump into their [Discord server](https://astro.build/chat).
+
+## 🤖 Development with Claude
+
+This project includes a [CLAUDE.md](./CLAUDE.md) file that provides guidance for [Claude Code](https://claude.ai/code) when working with this repository. It contains information about the project structure, architecture, and development workflows.
