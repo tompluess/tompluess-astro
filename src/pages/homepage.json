@@ -30,6 +30,12 @@
       "href": "https://simplificator.com/person/tom"
     },
     {
+      "title": "Gaia Trek",
+      "copy": "Unterwegs mit dem Rucksack in der Natur - dem Ruf im Herzen folgend",
+      "image": "../assets/gallery/rucksack.jpeg",
+      "href": "https://gaiatrek.ch"
+    },
+    {
       "title": "Zirkuswagen Hobbit",
       "copy": "Mein Zirkuswagen kann für Ferien oder eine Auszeit gemietet werden",
       "image": "../assets/hobbit/Hobbit-verschneiter-Berggipfel.jpeg",

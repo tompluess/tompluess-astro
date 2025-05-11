@@ -21,7 +21,8 @@
   {
     "title": "Bauplan Detail",
     "copy": "Vom Handgezeichneten Plan vom Holzlabor",
-    "image": "../assets/hobbit/Bauplan-Detail.jpeg"
+    "image": "../assets/hobbit/Bauplan-Detail.jpeg",
+    "ratio": "aspect-[2/3]"
   },
   {
     "title": "Balken auf Chassis anbringen",
@@ -216,12 +217,14 @@
   {
     "title": "Romain, der Profi-Solarteur",
     "copy": "Danke Romain, dass du mir beim ganzen Bau mit Rat & Tat zur Seite gestanden bist!",
-    "image": "../assets/hobbit/solaranlage-romain.jpeg"
+    "image": "../assets/hobbit/solaranlage-romain.jpeg",
+    "ratio": "aspect-[2/3]"
   },
   {
     "title": "Hobbit, bei Wintervollmond",
     "copy": "Möge er vielen ein gemütliches Zuhause bieten",
-    "image": "../assets/hobbit/vollmond-licht.jpeg"
+    "image": "../assets/hobbit/vollmond-licht.jpeg",
+    "ratio": "aspect-[2/3]"
   }
   ],
   "titleSecond": "Partner",

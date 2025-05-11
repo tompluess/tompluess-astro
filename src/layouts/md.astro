@@ -2,13 +2,33 @@
 const { frontmatter } = Astro.props;
 import Layout from "./layout.astro";
 import Navigation from "../components/navigation.astro";
-const defaultCover = "tom-pluess"
-const images = await Astro.glob("../assets/*");
-const cover = images.find(
-  (image) =>
-    image.default.src &&
-    image.default.src.includes(frontmatter.cover ? frontmatter.cover : defaultCover)
-).default;
+import defaultCoverImg from "../assets/tom-pluess.jpeg";
+
+// Import all images at the root level
+const rootImages = import.meta.glob('../assets/*.{jpeg,jpg,png}', { eager: true });
+// Import images in the gallery folder
+const galleryImages = import.meta.glob('../assets/gallery/*.{jpeg,jpg,png}', { eager: true });
+// Import images in the hobbit folder
+const hobbitImages = import.meta.glob('../assets/hobbit/*.{jpeg,jpg,png}', { eager: true });
+
+// Combine all image imports
+const allImages = { ...rootImages, ...galleryImages, ...hobbitImages };
+
+// Set default cover image
+let cover = defaultCoverImg;
+
+// If frontmatter specifies a cover, try to find it
+if (frontmatter.cover) {
+  const coverName = frontmatter.cover;
+
+  // Look for the image in all available images
+  for (const [path, image] of Object.entries(allImages)) {
+    if (path.includes(coverName)) {
+      cover = image.default;
+      break;
+    }
+  }
+}
 ---
 
 <Layout
