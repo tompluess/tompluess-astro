@@ -2,17 +2,20 @@
 import { Image } from "astro:assets";
 import OptionalLink from "./optional-link.astro";
 
-const { title, copy, image, href = "" } = Astro.props.item;
+const { title, copy, image, href = "", ratio = "aspect-[3/2]" } = Astro.props.item;
 
 // Import images from all relevant paths
 const rootImages = import.meta.glob("../assets/*", { eager: true });
 const nestedImages = import.meta.glob("../assets/*/*", { eager: true });
 const allImages = { ...rootImages, ...nestedImages };
+
+// Default aspect ratio is 3:2 if not specified in the item
+const aspectRatio = ratio || "aspect-[3/2]";
 ---
 
 <OptionalLink href={href}>
   <figure class="mb-8">
-    <div class="aspect-[3/2] w-full relative overflow-hidden">
+    <div class={`${aspectRatio} w-full relative overflow-hidden`}>
       <Image
         src={allImages[image]?.default || allImages['../assets/rucksack.jpeg'].default}
         widths={[480, 960]}
