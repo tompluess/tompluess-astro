@@ -1,10 +1,16 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to [Claude Code](claude.ai/code) when working with code in this repository.
 
 ## Project Overview
 
-This is a personal website for Tom Plüss built with Astro. The site showcases Tom's professional services and personal projects, including a Zirkuswagen "Hobbit" which can be rented for vacation stays. The site is deployed to Vercel.
+This is a personal website for Tom Plüss built with Astro. The site showcases Tom's professional services and personal projects, including:
+- A Zirkuswagen "Hobbit" which can be rented for vacation stays
+- Gaia Trek - wilderness trekking experiences
+- PVcontracting - solar energy installation service
+- Simplificator - software development and consulting
+
+The site is primarily in German and is deployed to Vercel.
 
 ## Development Commands
 
@@ -20,10 +26,12 @@ This is a personal website for Tom Plüss built with Astro. The site showcases T
 
 ### Framework & Technologies
 
-- **Astro** - The core framework for building the static site
-- **Tailwind CSS** - For styling
+- **Astro** (v5.3.0+) - The core framework for building the static site
+- **Tailwind CSS** (v4.0.0+) - For styling
 - **MDX** - For content with embedded components
-- **Vercel** - Deployment platform
+- **Sharp** - For image optimization
+- **Sitemap** - For SEO optimization
+- **Vercel** - Deployment platform with built-in analytics
 
 ### Key Directories & Files
 
@@ -38,8 +46,11 @@ This is a personal website for Tom Plüss built with Astro. The site showcases T
 The content is primarily organized in MDX files with frontmatter for metadata:
 
 - Pages use JSON files (like homepage.json and hobbit.json) to define gallery content
+- Gallery components display images with consistent formatting and optional captions
 - The site supports standard SEO tags, Open Graph, and Twitter card metadata
-- Image optimization is handled through Astro's built-in image support
+- Image optimization is handled through Astro's built-in image support with Sharp
+- Project images are organized by category in the assets directory (gallery, hobbit)
+- Public files include downloadable content like a vCard (tompluess.vcf)
 
 ### Navigation
 
@@ -51,4 +62,14 @@ The site uses both Vercel Analytics and Plausible.io for visitor tracking.
 
 ## Deployment
 
-The site is deployed on Vercel. The latest branch is `update-add-gaiatrek` which adds the Gaia Trek project to the site.
+The site is deployed on Vercel with automatic deployments from the main branch. Recent additions include the Gaia Trek project, which is now featured on the homepage.
+
+## Working with Images
+
+When adding new images to the site:
+
+- Place project-specific images in the appropriate subfolder in `/src/assets/`
+- Use the `<Image>` component from Astro for automatic optimization
+- For galleries, update the corresponding JSON file (like homepage.json or hobbit.json)
+- Consider using the `image-w-caption.astro` component for images that need captions
+- The preferred aspect ratio for gallery images is 3:2
