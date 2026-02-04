@@ -211,7 +211,7 @@
   },
   {
     "title": "Solaranlage angeschlossen",
-    "copy": "Nach mehreren Monaten Lieferverzögerung des Wechselrichters ist die Solaranlage nun endlich am Netz - und produziert ca. doppelt so viel Strom, wie der Hobbit selber braucht (hochgerechnet, über's Jahr gemittelt)",
+    "copy": "Nach mehreren Monaten Lieferverzögerung des Wechselrichters ist die Solaranlage nun endlich am Netz - und produziert ca. dreimal so viel Strom, wie der Hobbit selber braucht (über's Jahr gemittelt)",
     "image": "../assets/hobbit/solaranlage-angeschlossen.jpeg"
   },
   {
@@ -235,10 +235,10 @@
     "href": "https://holzlabor.org"
   },
   {
-    "title": "Energiegenossenschaft Schweiz",
+    "title": "PVcontracting AG, Kriens LU",
     "copy": "Solaranlage",
-    "image": "../assets/hobbit/egch_solaranlage2.png",
-    "href": "https://www.energiegenossenschaft.ch/"
+    "image": "../assets/gallery/pvcontracting.jpeg",
+    "href": "https://pvcontracting.ch/?source=hobbit"
   },
   {
     "title": "Camping Viva, Rueras GR",
