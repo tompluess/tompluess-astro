@@ -6,7 +6,7 @@ Deployed on: [vercel.com](https://vercel.com)
 ## Featuring
 
 - ✅ This website is build with **[Astro web framework](https://docs.astro.build)**
-- ✅ Integration with **Tailwind CSS** ([@astrojs/tailwind](https://docs.astro.build/en/guides/integrations-guide/tailwind/))
+- ✅ Integration with **Tailwind CSS** ([@tailwindcss/vite](https://tailwindcss.com/docs/installation/framework-guides/astro))
 - ✅ **Image optimization** using built-in image support([astro:assets](https://docs.astro.build/en/guides/images/))
 - ✅ **SEO optimization** with site metadata, title and meta description tags, [Open Graph](https://www.opengraph.xyz) properties
 - ✅ **Hamburger Navigation Menu**
