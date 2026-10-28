@@ -1,22 +1,13 @@
 import { defineConfig } from "astro/config"
 import mdx from '@astrojs/mdx'
-import tailwindcss from '@tailwindcss/postcss'
-import autoprefixer from 'autoprefixer'
+import tailwindcss from '@tailwindcss/vite'
 import sitemap from "@astrojs/sitemap"
-import tailwindConfig from "./tailwind.config"
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://tompluess.ch/",
   vite: {
-    css: {
-      postcss: {
-        plugins: [
-          tailwindcss({ config: tailwindConfig }),
-          autoprefixer(),
-        ],
-      },
-    },
+    plugins: [tailwindcss()],
   },
   integrations: [
     mdx(),

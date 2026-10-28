@@ -26,7 +26,7 @@ The site is primarily in German and is deployed to Vercel.
 
 ### Framework & Technologies
 
-- **Astro** (v5.3.0+) - The core framework for building the static site
+- **Astro** (v7.0.0+) - The core framework for building the static site
 - **Tailwind CSS** (v4.0.0+) - For styling
 - **MDX** - For content with embedded components
 - **Sharp** - For image optimization
